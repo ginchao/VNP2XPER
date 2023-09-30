@@ -18,9 +18,9 @@
   local serv = win:Server("VNP2 X ⭐Premium", "")  
   local drops = serv:Channel("Mob")  
   local quest = nil  
-  local drop = drops:Dropdown("Mob lv 2000 > lv 12000", {"Kaido","Paw User","King Vampire","Magma Boss","String Boss","Nick Beo","Tango"}, function(y)  
+  local drop = drops:Dropdown("Mob lv 2000 > lv 12000", {"Kaido","Paw User","King Vampire","Magma Boss","String Boss","Nick Beo","Tango","Garou"}, function(y)  
  local plrmainhr = game.Players.LocalPlayer.Character.HumanoidRootPart 
-  if y == "Kaido" or y == "Paw User" or y == "King Vampire" or y == "Magma Boss" or y == "String Boss" or y == "Nick Beo" or y == "Tango" then  
+  if y == "Kaido" or y == "Paw User" or y == "King Vampire" or y == "Magma Boss" or y == "String Boss" or y == "Nick Beo" or y == "Tango" or y == "Garou" then  
   quest = y  
   end  
   end)  
@@ -46,6 +46,8 @@
   game:GetService("Workspace")["NickBeo Island [ 7000 + ]"]["Quest NickBeo"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
   elseif quest == "Tango" and quest ~= nil then  
   game:GetService("Workspace")["NickBeo Island [ 7000 + ]"]["Quest Tango"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
+elseif quest == "Garou" and quest ~= nil then  
+ game:GetService("Workspace")["Star Island [ Lv 20000+ ]"]["Garou Quest [ Lv 20.000+ ]"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
   end  
   end)  
   end  
@@ -76,13 +78,14 @@
  fiv.NickBeo.HumanoidRootPart.CFrame = plrmainhr.CFrame*CFrame.new(0,0,-6) 
  elseif quest == "Tango" then 
  fiv.Tango.HumanoidRootPart.CFrame = plrmainhr.CFrame*CFrame.new(0,0,-6) 
+ elseif quest == "Garou" then 
+ fiv.Garou.HumanoidRootPart = plrmainhr.CFrame*CFrame.new(0,0,-6) 
  end 
   end)  
   end  
  end) 
  end 
   end) 
-  drops:Label("Auto Quest Đã Được Tối Ưu")  
   local tgls = serv:Channel("Stats and Buy")   
    tgls:Toggle("Auto Sword",false, function(z)   
    getgenv().autostats = z   
