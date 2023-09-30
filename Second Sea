@@ -283,6 +283,26 @@ elseif quest == "Garou" and quest ~= nil then
     end    
    end   
     end)   
+  drops:Toggle("⭐Choose Weapon To X100 Acttack",false, function(v)    
+   if Weapon == nil then   
+   DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x100", "Ok")   
+   elseif Weapon ~= nil then   
+    for _ = 1,100 do    
+    getgenv().ep = v    
+    spawn(function()    
+    while ep == true do    
+    pcall(function()    
+    while ep do wait()    
+    spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)    
+    wait()    
+    end)    
+    end    
+    end)    
+    end    
+    end)    
+    end    
+   end   
+    end)   
   drops:Toggle("Grabtools",false, function(I)  
   getgenv().autograb = I  
   spawn(function()  
