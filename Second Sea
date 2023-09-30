@@ -18,7 +18,7 @@
   local serv = win:Server("VNP2 X ⭐Premium", "")  
   local drops = serv:Channel("Mob")  
   local quest = nil  
-  local drop = drops:Dropdown("Mob lv 2000 > lv 12000", {"Kaido","Paw User","King Vampire","Magma Boss","String Boss","Nick Beo","Tango","Garou"}, function(y)  
+  local drop = drops:Dropdown("Mob lv 2000 > lv 20000+", {"Kaido","Paw User","King Vampire","Magma Boss","String Boss","Nick Beo","Tango","Garou"}, function(y)  
  local plrmainhr = game.Players.LocalPlayer.Character.HumanoidRootPart 
   if y == "Kaido" or y == "Paw User" or y == "King Vampire" or y == "Magma Boss" or y == "String Boss" or y == "Nick Beo" or y == "Tango" or y == "Garou" then  
   quest = y  
@@ -770,6 +770,10 @@ elseif quest == "Garou" and quest ~= nil then
   btns:Button("Kaido Island lv 2000", function()  
           local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart  
           rootPart.CFrame = CFrame.new(-708.903564, 87687.7266, 809.050476, 0.312079072, -9.11389222e-08, 0.950056136, -5.59602764e-09, 1, 9.77682433e-08, -0.950056136, -3.58279628e-08, 0.312079072)*CFrame.new(0, 5, 0)  
+  end)  
+  btns:Button("Garou Island lv 20000+", function()  
+          local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart  
+          rootPart.CFrame = CFrame.new(1538.36804, 87694.3438, 1098.62891, -0.157189935, -1.33758995e-08, -0.987568378, -4.27874554e-08, 1, -6.73385481e-09, 0.987568378, 4.1197044e-08, -0.157189935)*CFrame.new(0, 5, 0)  
   end)  
   btns:Button("Nickbeo Island lv 7000+", function()  
           local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart  
