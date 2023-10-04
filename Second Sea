@@ -1308,20 +1308,6 @@ elseif quest == "Garou" and quest ~= nil then
   end)  
   end  
   end) 
- local drops = serv:Channel("🌟Skill Tester") 
- drops:Button("Beautiful Skill",function() 
- for i, v in pairs(game.workspace:GetDescendants()) do 
- if v:IsA("Tool") and v.Name == "Real Triple Katana"  then 
- for k, a in pairs(v.Z:GetChildren()) do 
- if a:IsA("RemoteEvent") and a.Name == "Fire" then 
- for _ = 1,350 do  
- a:FireServer() 
- end 
- end 
- end 
- end 
- end 
- end) 
   local chat = game.Players.LocalPlayer.Name  
   local drops = serv:Channel("🌟Players Test")  
   local Weaponlist = {}  
@@ -1346,7 +1332,7 @@ elseif quest == "Garou" and quest ~= nil then
   end)  
   for i, c in pairs(game.Players:GetChildren()) do   drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value) 
   end 
- local drops = serv:Channel("Players Testv2🌟") 
+ local drops = serv:Channel("🌟Players Testv2") 
   for i, c in pairs(game.Players:GetChildren()) do   
  if c.Name == "ginchao12" then drops:Label("Level."..""..c.Data.Levels.Value.." [🌟"..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value)  
  for i, a in pairs(c.Backpack:GetChildren()) do 
