@@ -60,10 +60,11 @@ elseif quest == "Garou" and quest ~= nil then
   if quest == nil then  
   DiscordLib:Notification("Warning", "Choose Mob To Auto Bring", "Ok")  
   elseif quest ~= nil then  
- getgenv().automob = mob 
- spawn(function() 
- while automob do wait() 
- pcall(function() 
+ getgenv().bringmob2 = mob
+if v2 then a:Disconnect() end
+if bringmob2 ~= v2 then
+v2 = game.RunService.RenderStepped:Connect(function()
+if bringmob2 == false then v2:Disconnect() end
  if quest == "Kaido" then 
  fiv.Kaidou.HumanoidRootPart.CFrame = plrmainhr.CFrame*CFrame.new(0,0,-10) 
  elseif quest == "Paw User" then 
@@ -81,9 +82,8 @@ elseif quest == "Garou" and quest ~= nil then
  elseif quest == "Garou" then 
  fiv.Garou.HumanoidRootPart.CFrame = plrmainhr.CFrame*CFrame.new(0,0,-6)
  end 
-  end)  
-  end  
- end) 
+  end)
+ end
  end 
   end) 
   local tgls = serv:Channel("Stats and Buy")   
