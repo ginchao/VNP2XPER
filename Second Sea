@@ -1,6 +1,6 @@
  function find(se) 
  for i, v in pairs(game.Players:GetChildren()) do 
- if v.Name == "Quanphan01299" or v.Name == "ZzKenKK1" or v.Name == "NHBD12" or v.Name == "ginchao12" or v.Name == "haurhj" or v.Name == "roxblox_1238" or v.Name == "mingcc15562" or v.Name == "thinhbietha0ck" then 
+ if v.Name == "Quanphan01299" or v.Name == "ZzKenKK1" or v.Name == "NHBD12" or v.Name == "ginchao12" or v.Name == "haurhj" or v.Name == "roxblox_1238" or v.Name == "mingcc15562" or v.Name == "thinhbietha0ck" or v.Name == "Thanhnha161" then 
  se = v.Name 
  print("⭐"..se) 
  end 
