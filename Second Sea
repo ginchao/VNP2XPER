@@ -10,7 +10,7 @@
   local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()   
    local win = DiscordLib:Window("[Test Hub X Premium] ".."Premium Shares ⭐"..find())   
  local per = game.Players.LocalPlayer.Name  
- if per == "NHBD12" or per == "ginchao12" or per == "ZzKenKK1" or per == "haurhj" or per == "roxblox_1238" or per == "mingcc15562" or per == "Quanphan01299" then 
+ if per == "NHBD12" or per == "ginchao12" or per == "ZzKenKK1" or per == "haurhj" or per == "roxblox_1238" or per == "mingcc15562" or per == "Quanphan01299" or per == "thinhbietha0ck" or per == "Thanhnha161" then 
  DiscordLib:Notification("Premium Stars⭐","Hello! ".."⭐"..per..".                                              ".."You Have Premium Stars So You Get All The Features Unlocked","Ok") 
  elseif find() then 
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".                                              ".." Sever You Have Someone [⭐"..find().."] Who Owns Premium Stars So You Get All The Features Unlocked","Thanks ".."⭐"..find())  
