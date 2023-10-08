@@ -60,6 +60,7 @@ elseif quest == "Garou" and quest ~= nil then
   if quest == nil then  
   DiscordLib:Notification("Warning", "Choose Mob To Auto Bring", "Ok")  
   elseif quest ~= nil then  
+local v2 = nil
  getgenv().bringmob2 = mob
 if v2 then a:Disconnect() end
 if bringmob2 ~= v2 then
