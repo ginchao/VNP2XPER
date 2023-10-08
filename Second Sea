@@ -1426,8 +1426,10 @@ if brin == false then v2:Disconnect() end
   end  
   end  
   end)  
-  for i, c in pairs(game.Players:GetChildren()) do   drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value) 
+  for i, c in pairs(game.Players:GetChildren()) do  
+if c.Name ~= "ginchao12" then drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value) 
   end 
+end
  local drops = serv:Channel("🌟Players Testv2") 
  for i, c in pairs(game.Players:GetChildren()) do   
  if c.Name ~= "ginchao12" then 
