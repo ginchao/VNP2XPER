@@ -1,3 +1,25 @@
+local gais = 14
+local gai = {"rbxassetid://6942501524","rbxassetid://7903531742","rbxassetid://7903522083","rbxassetid://6409799523","rbxassetid://8881175113","rbxassetid://7584008919","rbxassetid://6271530098","rbxassetid://7388383866","rbxassetid://7962732035","rbxassetid://6842416695","rbxassetid://6576447146",
+		"rbxassetid://10171317457","rbxassetid://10171317457","rbxassetid://8598068647","rbxassetid://8192162908","rbxassetid://8677814109","rbxassetid://4597457883"
+	}
+game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop.Map.Pic2.Decal.Texture = gai[3]
+game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop.Map.Pic.Decal.Texture = gai[2]
+game:GetService("Workspace")["PVP AND TRAINING AREA"].Bank.Map.Pic.Decal.Texture = gai[7]
+game:GetService("Workspace")["PVP AND TRAINING AREA"].Bank.Map.Pic2.Decal.Texture = gai[9]
+for i, v in pairs(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Map:GetDescendants()) do
+if v.Name == "Decal" then
+v.Texture = gai[16] --Map
+end
+end
+for i, v in pairs(game:GetService("Workspace")["PVP AND TRAINING AREA"].Bank.Map:GetChildren()) do
+if v.Name == "Pic" or v.Name == "Pic2" then
+v.Size = Vector3.new(0.1,gais,gais) -- gaisize bank
+end
+end
+game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop.Map.Pic2.Size = Vector3.new(0.1,gais,gais)
+game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop.Map.Pic.Size = Vector3.new(0.1,gais,gais) --gaisize shop
+
+------------
  function find(se) 
  for i, v in pairs(game.Players:GetChildren()) do 
  if v.Name == "Quanphan01299" or v.Name == "ZzKenKK1" or v.Name == "NHBD12" or v.Name == "ginchao12" or v.Name == "haurhj" or v.Name == "roxblox_1238" or v.Name == "mingcc15562" or v.Name == "thinhbietha0ck" or v.Name == "Thanhnha161" then 
