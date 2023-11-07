@@ -1,18 +1,4 @@
--- // Anti afk V2 \\--
-task.spawn(function()
-    if game.PlaceId ~= 9821272782 then
-        getgenv().Press = function(v)
-            return game:GetService("VirtualInputManager"):SendKeyEvent(true, v, false, game);
-        end
-        while true do wait(10.5)
-            Press("RightBracket");
-        end
-    else
-        while true do wait(10.5)
-            keypress(0xDD);
-        end
-    end
-end)
+
 local s = 14
 local gai = {"rbxassetid://6942501524","rbxassetid://7903531742","rbxassetid://7903522083","rbxassetid://6409799523","rbxassetid://8881175113","rbxassetid://7584008919","rbxassetid://6271530098","rbxassetid://7388383866","rbxassetid://7962732035","rbxassetid://6842416695","rbxassetid://6576447146",
 		"rbxassetid://10171317457","rbxassetid://10171317457","rbxassetid://8598068647","rbxassetid://8192162908","rbxassetid://8677814109","rbxassetid://4597457883"
@@ -1222,6 +1208,23 @@ HttpService = game:GetService("HttpService")
 else
 DiscordLib:Notification("Thông Báo","Tin Nhắn Chưa Được Gửi Hãy Thử Lại...","Ok..")
 end
+end)
+btns:Toggle("Anti Afk",false,function()
+-- // Anti afk V2 \\--
+task.spawn(function()
+    if game.PlaceId ~= 9821272782 then
+        getgenv().Press = function(v)
+            return game:GetService("VirtualInputManager"):SendKeyEvent(true, v, false, game);
+        end
+        while true do wait(10.5)
+            Press("RightBracket");
+        end
+    else
+        while true do wait(10.5)
+            keypress(0xDD);
+        end
+    end
+end)
 end)
   local inf = nil  
   btns:Toggle("Infjump", false, function(v)  
