@@ -105,7 +105,7 @@ end)
    end   
    end)   
   local tgls = serv:Channel("Stats and Auto Skill") 
- tgls:Toggle("Auto Sword",false, function(z) 
+  tgls:Toggle("Auto Sword",false, function(z) 
  getgenv().autostats = z 
  spawn(function() 
  while autostats do wait() 
@@ -115,27 +115,27 @@ end)
  end) 
  end) 
  tgls:Toggle("Auto Fruit",false, function(z) 
- getgenv().autostats = z 
+ getgenv().autostatsf = z 
  spawn(function() 
- while autostats do wait() 
+ while autostatsf do wait() 
  game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("DevilFruit") 
  wait() 
  end 
  end) 
  end) 
  tgls:Toggle("Auto Health",false, function(z) 
- getgenv().autostats = z 
+ getgenv().autostatsh = z 
  spawn(function() 
- while autostats do wait() 
+ while autostatsh do wait() 
  game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("MaxHealth") 
  wait() 
  end 
  end) 
  end) 
  tgls:Toggle("Auto Melee",false, function(z) 
- getgenv().autostats = z 
+ getgenv().autostatsm = z 
  spawn(function() 
- while autostats==true do wait() 
+ while autostatsm == true do wait() 
  game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Melee") 
  wait() 
  end 
