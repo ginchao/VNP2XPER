@@ -259,11 +259,10 @@ fireclickdetector(game:GetService("Workspace")["Star Island [ Lv 20000+ ]"].Bank
 end
 end
 end)
-tgls:Toggle("Auto Drop Item",false,function()
-getgenv().drop = true
+tgls:Toggle("Auto Drop Item",false,function(v)
+getgenv().drop = v
 while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
-wait()
 end
 end)
 tgls:Toggle("Auto Buy God Box",false, function(v) 
@@ -539,8 +538,8 @@ drops:Label("Fast ActtackV2 No Choose")
  end 
  end) 
 
-  drops:Label("Fast Attack Equip") 
- drops:Toggle("Fast Acttack ",false, function(e) 
+  drops:Label("Fast AttackV3") 
+ drops:Toggle("Fast ActtackV3 ",false, function(e) 
  getgenv().fasst = e 
  if not getgenv().fasst then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
  spawn(function() 
@@ -564,7 +563,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end 
  end) 
  end) 
- drops:Toggle("⭐Fast Acttack x5",false, function(e) 
+ drops:Toggle("⭐Fast ActtackV3 x5",false, function(e) 
  for _ = 1,5 do 
  getgenv().fastp = e 
  if not getgenv().fastp then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
@@ -590,7 +589,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end) 
  end 
  end) 
- drops:Toggle("⭐Fast Acttack x15",false, function(e) 
+ drops:Toggle("⭐Fast ActtackV3 x15",false, function(e) 
  for _ = 1,15 do 
  getgenv().faste = e; 
  if not getgenv().faste then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
@@ -616,7 +615,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end) 
  end 
  end) 
- drops:Toggle("⭐Fast Acttack x30",false, function(e) 
+ drops:Toggle("⭐Fast ActtackV3 x30",false, function(e) 
  for _ = 1,30 do 
  getgenv().auto = e; 
  if not getgenv().auto then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
@@ -642,7 +641,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end) 
  end 
  end) 
- drops:Toggle("⭐Fast Acttack x60",false, function(e) 
+ drops:Toggle("⭐Fast ActtackV3 x60",false, function(e) 
  for _ = 1,60 do 
  getgenv().fast = e 
  if not getgenv().fast then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
