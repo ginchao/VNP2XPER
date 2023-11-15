@@ -167,6 +167,7 @@ end)
  end 
  end 
  end)
+end)
 drops:Toggle("Grabtools",false, function(I) 
  getgenv().autograb = I 
  spawn(function() 
