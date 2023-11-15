@@ -329,6 +329,7 @@ else
 getgenv().BuyBag = a
 while BuyBag do wait()
 fireclickdetector(game:GetService("Workspace")["Star Island [ Lv 20000+ ]"].Bank[bb].ClickDetector)
+wait()
 end
 end
 end)
