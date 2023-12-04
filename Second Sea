@@ -150,13 +150,7 @@ drops:Toggle("⭐Auto Armor",false, function(o)
   end  
   end  
   end)  
-  drops:Button("Super Ultra Skill", function()  
-  for i,v in pairs(game.Players:GetDescendants()) do  
-  if v:IsA("RemoteEvent") and v.Name == "Fire" then  
-  v:FireServer()  
-  end  
-  end  
-  end)  
+  
 drops:Toggle("Anti Afk",false,function()
 -- // Anti afk V2 \\--
 task.spawn(function()
