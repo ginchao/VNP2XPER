@@ -391,7 +391,7 @@ wait()
 end
 end
 end)
-tgls:Toggle("Auto Drop Item",false,function(v)
+tgls:Toggle("⭐Auto Drop Item",false,function(v)
 getgenv().drop = v
 while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
