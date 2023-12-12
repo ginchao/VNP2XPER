@@ -28,7 +28,7 @@ end
 ---------------
  function find(se) 
  for i, v in pairs(game.Players:GetChildren()) do 
- if v.Name == "Quanphan01299" or v.Name == "ZzKenKK1" or v.Name == "NHBD12" or v.Name == "ginchao12" or v.Name == "haurhj" or v.Name == "roxblox_1238" or v.Name == "mingcc15562" or v.Name == "thinhbietha0ck" or v.Name == "Thanhnha161" or v.Name == "nanhshshhhshsgs" or v.Name == "ngoibui22" then 
+ if v.Name == "Quanphan01299" or v.Name == "ZzKenKK1" or v.Name == "NHBD12" or v.Name == "ginchao12" or v.Name == "TimeoSamuell" or v.Name == "roxblox_1238" or v.Name == "mingcc15562" or v.Name == "thinhbietha0ck" or v.Name == "Thanhnha161" or v.Name == "nanhshshhhshsgs" or v.Name == "ngoibui22" then 
  se = v.Name 
  print("⭐"..se) 
  end 
@@ -38,7 +38,7 @@ end
   local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()   
    local win = DiscordLib:Window("[Test Hub X Premium⭐] ")   
  local per = game.Players.LocalPlayer.Name  
- if per == "NHBD12" or per == "ginchao12" or per == "ZzKenKK1" or per == "haurhj" or per == "roxblox_1238" or per == "mingcc15562" or per == "Quanphan01299" or per == "thinhbietha0ck" or per == "Thanhnha161" or per == "nanhshshhhshsgs" or per == "ngoibui22" then 
+ if per == "NHBD12" or per == "ginchao12" or per == "ZzKenKK1" or per == "TimeoSamuell" or per == "roxblox_1238" or per == "mingcc15562" or per == "Quanphan01299" or per == "thinhbietha0ck" or per == "Thanhnha161" or per == "nanhshshhhshsgs" or per == "ngoibui22" then 
  DiscordLib:Notification("Premium Stars⭐","Hello! ".."⭐"..per..".                                              ".."You Have Premium Stars So You Get All The Features Unlocked","Ok") 
  elseif find() then 
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".                                              ".." Sever You Have Someone [⭐"..find().."] Who Owns Premium Stars So You Get All The Features Unlocked","Thanks ".."⭐"..find())  
