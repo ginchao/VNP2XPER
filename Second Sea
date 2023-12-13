@@ -111,7 +111,7 @@ game:GetService("Workspace")["Cursed Island [  50000+ ]"]["Sukuna Quest [ Lv 50.
    end)   
    end   
    end)   
-drops:Toggle("⭐One Shot",false,function(v)
+drops:Toggle("⭐One Shot | LAG",false,function(v)
 if quest == nil then   
    DiscordLib:Notification("Warning", "Choose Mob To One shot", "Ok")   
    elseif quest ~= nil then   
