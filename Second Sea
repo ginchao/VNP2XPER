@@ -57,7 +57,7 @@ quest = y
 end
 end
 end)
-drops:Toggle("Auto Bring Mob Choose",false, function(a)
+drops:Toggle("Auto Bring",false, function(a)
 if quest == nil then   
    DiscordLib:Notification("Warning", "Choose Mob To Auto Bring", "Ok")   
    elseif quest ~= nil then   
@@ -79,7 +79,7 @@ end)
 end
 end
 end)   
-   drops:Toggle("Chose Mob To Auto Quest",false, function(questauto)   
+   drops:Toggle("Auto Quest",false, function(questauto)   
    if quest == nil then   
    DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")   
    elseif quest ~= nil then   
@@ -111,6 +111,21 @@ game:GetService("Workspace")["Cursed Island [  50000+ ]"]["Sukuna Quest [ Lv 50.
    end)   
    end   
    end)   
+drops:Toggle("⭐One Shot",false,function(v)
+if quest == nil then   
+   DiscordLib:Notification("Warning", "Choose Mob To One shot", "Ok")   
+   elseif quest ~= nil then   
+getgenv().DMG = v
+game.RunService.Stepped:Connect(function()
+if DMG then
+for i = 1,5 do
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
+game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
+end
+end
+end)
+end
+end)
 drops:Button("Base Sky", function()   
 
     local box = Instance.new("Part") box.Parent = workspace box.Anchored = true box.CanCollide = true box.Name = "Testhub" box.Size = Vector3.new(100000,2,1000000) box.Position = Vector3.new(100,100000,100) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Testhub.CFrame*CFrame.new(0,15,0)
