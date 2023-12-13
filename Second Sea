@@ -118,7 +118,7 @@ if quest == nil then
 getgenv().DMG = v
 game.RunService.Stepped:Connect(function()
 if DMG then
-for i = 1,5 do
+for i = 1,2 do
 sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
 game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
 end
