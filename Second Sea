@@ -121,19 +121,17 @@ game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
 end
 end
 end)
-drops:Toggle("⭐One Shot | LAG",false,function(v)
+drops:Toggle("⭐One Shot Fix",false,function(v)
 if quest == nil then   
    DiscordLib:Notification("Warning", "Choose Mob To One shot", "Ok")   
    elseif quest ~= nil then   
-getgenv().DMG = v
-game.RunService.Stepped:Connect(function()
-if DMG then
-for i = 1,2 do
+getgenv().looponeshot = v
+while looponeshot do task.wait()
+pcall(function()
 sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
-game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
-end
-end
+game:GetService("Workspace")["NPC DAMAGE"].Kaidou.Head:Destroy()
 end)
+end
 end
 end)
 drops:Button("Base Sky", function()   
