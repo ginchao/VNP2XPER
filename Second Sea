@@ -129,7 +129,7 @@ getgenv().looponeshot = v
 while looponeshot do task.wait()
 pcall(function()
 sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
-game:GetService("Workspace")["NPC DAMAGE"].Kaidou.Head:Destroy()
+game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
 end)
 end
 end
