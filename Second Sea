@@ -111,26 +111,22 @@ game:GetService("Workspace")["Cursed Island [  50000+ ]"]["Sukuna Quest [ Lv 50.
    end)   
    end   
    end)
-   drops:Button("⭐One Shot Click",function()
+     drops:Button("⭐One Shot Click",function()
 if quest == nil then   
    DiscordLib:Notification("Warning", "Choose Mob To One shot", "Ok")   
    elseif quest ~= nil then
+for i, v in pairs(game.Players:GetChildren()) do
+if v.Character.Humanoid.Health > 0 and v.Name ~= game.Players.LocalPlayer.Name then
+if (game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude <= (game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude  then 
+DiscordLib:Notification("Warning", " Không Thể Oneshot Khi Có Người Gần Mục Tiêu Hơn Bạn", "Ok")   
+else
+ print("Oneshot")
 while task.wait() do 
 sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
 game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
 end
 end
-end)
-drops:Toggle("⭐One Shot ⚠️Error",false,function(v)
-if quest == nil then   
-   DiscordLib:Notification("Warning", "Choose Mob To One shot", "Ok")   
-   elseif quest ~= nil then   
-getgenv().looponeshot = v
-while looponeshot do task.wait()
-pcall(function()
-sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
-game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
-end)
+end
 end
 end
 end)
