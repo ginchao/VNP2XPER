@@ -121,14 +121,14 @@ if v.Character.Humanoid.Health > 0 and v.Name ~= game.Players.LocalPlayer.Name t
 if (game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude <= (game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude  then 
 DiscordLib:Notification("Warning", " Không Thể Oneshot Khi Có Người Gần Mục Tiêu Hơn Bạn", "Ok")   
 else
- print("Oneshot")
+print("Oneshot")
 while task.wait() do 
 sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
 game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
 end
 end
 end
-end
+--end
 end
 end)
 drops:Button("Base Sky", function()   
