@@ -867,7 +867,7 @@ drops:Label("Fast ActtackV2 No Choose")
    end  
   end  
    end)   
-drops:Toggle("Lookat Player",false,function(v)
+drops:Toggle("Lock Screen🖥️",false,function(v)
 if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Spectate, Need Loadmap", "Ok") 
  else
@@ -875,6 +875,25 @@ getgenv().look = v
 game.RunService.RenderStepped:Connect(function()
 if getgenv().look then 
 workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.p, game.Players[plr].Character.Head.CFrame.p)
+end
+end)
+end
+end)
+drops:Toggle("🔗Lookat | No Shift Lock",false,function(v)
+if plr == nil then 
+ DiscordLib:Notification("Warning", "Choose Player to Spectate, Need Loadmap", "Ok") 
+ else
+getgenv().lookatv2 = v
+local plrlo = game.Players[plr].Character
+game:GetService("RunService").RenderStepped:Connect(function()
+if getgenv().lookatv2 then
+if game.Players.LocalPlayer.Character.PrimaryPart and plrlo:FindFirstChild("HumanoidRootPart") then
+				local chrPos=game.Players.LocalPlayer.Character.PrimaryPart.Position
+				local tPos=plrlo:FindFirstChild("HumanoidRootPart").Position
+				local modTPos=Vector3.new(tPos.X,chrPos.Y,tPos.Z)
+				local newCF=CFrame.new(chrPos,modTPos)
+				game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(newCF)
+end
 end
 end)
 end
@@ -1030,28 +1049,7 @@ if brin == false then v2:Disconnect() end
  drop3:Add(v.Name) 
  end 
  end) 
-  drops:Toggle("⭐Super Ultra DAMGE Attack",false, function(v)    
-    getgenv().autop = v;   
-    spawn(function()    
-    while autop do wait()   
-   if not getgenv().autop then break end   
-    for i, c in pairs(game.Players:GetChildren()) do    
-    if c.ClassName == "Player" then    
-    for i, f in pairs(c:GetChildren()) do    
-    if f:IsA("Backpack") then    
-    for i, a in pairs(f:GetDescendants()) do    
-    if a:IsA("RemoteEvent") and a.Name == "Hitbox" then    
-    a:FireServer(1, 0)    
-   break;   
-    end    
-    end    
-    end    
-    end    
-    end    
-    end    
-    end    
-    end)    
-    end)   
+  
   local drop = drops:Slider("Slide me!", 0, 2500, 0, function(t) 
  print(t) 
  _G.HeadSize = t 
