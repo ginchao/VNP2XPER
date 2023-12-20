@@ -31,7 +31,7 @@ end
    local win = DiscordLib:Window("[Test Hub X Premium⭐] ")   
 local per = game:GetService("Players").LocalPlayer.Name
 if find then 
- DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".                                              ".." Sever You Have Someone [⭐"..find.."] Who Owns Premium Stars So You Get All The Features Unlocked","Thanks ".."⭐"..find)  
+ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".                                              ".." Your Server Have Premium  [⭐"..find.."]","Thanks ".."⭐"..find)  
   end
   local serv = win:Server("VNP2 X ⭐Premium", "")  
   local drops = serv:Channel("Farm And LocalPlayer")  
