@@ -126,7 +126,7 @@ game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
 end
 end
 end)
-drops:Button("🌟Attack X300 Click",function()
+drops:Button("🌟Power Click",function()
 for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
  if v:IsA("Tool") and v:FindFirstChild("Hitbox") then 
 game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
