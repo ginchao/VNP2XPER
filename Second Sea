@@ -101,11 +101,24 @@ game:GetService("Workspace")["Cursed Island [  50000+ ]"]["Sukuna Quest [ Lv 50.
    end)   
    end   
    end)
-     drops:Button("⭐One Shot Click ⚠️Error",function()
+     drops:Button("🌟One Shot Click",function()
 if quest == nil then   
    DiscordLib:Notification("Warning", "Choose Mob To One shot", "Ok")   
    elseif quest ~= nil then
-DiscordLib:Notification("Warning", "Oneshot Will Open Next Week", "Ok")   
+while task.wait() do 
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
+game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
+end
+end
+end)
+drops:Button("🌟Attack X300 Click",function()
+for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+ if v:IsA("Tool") and v:FindFirstChild("Hitbox") then 
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+for i = 1,300 do
+ v.Hitbox:FireServer(math.huge,math.huge) 
+end
+end
 end
 end)
 drops:Button("Base Sky", function()   
@@ -507,102 +520,7 @@ end
                   end  
           end  
   end)  
- drops:Toggle("Choose Weapon To Fast ActackV1",false, function(v) 
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack", "Ok") 
- elseif Weapon ~= nil then 
-  getgenv().ie = v  
-  spawn(function()  
-  while ie == true do  
-  pcall(function()  
-  while ie do wait()  game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end  
-  end)  
-  end  
-  end) 
- end 
-  end)  
-  drops:Toggle("⭐Choose Weapon To x5 Fast ActackV1",false, function(v) 
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Atack x5", "Ok") 
- elseif Weapon ~= nil then 
-  for _ = 1,5 do  
-  getgenv().ea = v  
-  spawn(function()  
-  while ea == true do  
-  pcall(function()  
-  while ea do wait()  
-  pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end)  
-  end  
-  end)  
-  end  
-  end)  
-  end  
- end 
-  end)  
-  drops:Toggle("⭐Choose Weapon To x10 Fast ActackV1",false, function(v)  
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x10", "Ok") 
- elseif Weapon ~= nil then 
-  for _ = 1,10 do  
-  getgenv().euta = v  
-  spawn(function()  
-  while euta == true do  
-  pcall(function()  
-  while euta do wait()  
-  pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end)  
-  end  
-  end)  
-  end  
-  end)  
-  end  
- end 
-  end)  
-  drops:Toggle("⭐Choose Weapon To X20 ActackV1",false, function(v)  
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x20", "Ok") 
- elseif Weapon ~= nil then 
-  for _ = 1,20 do  
-  getgenv().ej = v  
-  spawn(function()  
-  while ej == true do  
-  pcall(function()  
-  while ej do wait()  
-  spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end)  
-  end  
-  end)  
-  end  
-  end)  
-  end  
- end 
-  end)  
- drops:Toggle("⭐Choose Weapon To X50 ActackV1",false, function(v)  
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x50", "Ok") 
- elseif Weapon ~= nil then 
-  for _ = 1,50 do  
-  getgenv().ep = v  
-  spawn(function()  
-  while ep == true do  
-  pcall(function()  
-  while ep do wait()  
-  spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end)  
-  end  
-  end)  
-  end  
-  end)  
-  end  
- end 
-  end)  
+  
 drops:Label("Fast ActtackV2 No Choose") 
  drops:Toggle("Fast ActtackV2 ",false, function(e) 
  getgenv().auto = e 
