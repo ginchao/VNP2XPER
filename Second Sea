@@ -110,9 +110,9 @@ game:GetService("RunService").RenderStepped:Connect(function()
 if getgenv().lock then
 sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
 game:GetService("Workspace")["NPC DAMAGE"].Kaidou.HumanoidRootPart.Anchored = true
-end
 else
 game:GetService("Workspace")["NPC DAMAGE"].Kaidou.HumanoidRootPart.Anchored = false
+end
 end)
 end
 end)
