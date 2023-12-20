@@ -106,15 +106,14 @@ drops:Toggle("🔒Lock Mob",false, function(l)
    DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")   
    elseif quest ~= nil then
 getgenv().lock = l
-while lock do task.wait()
-pcall(function()
+game:GetService("RunService").RenderStepped:Connect(function()
 if getgenv().lock then
-game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Anchored = true
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
+game:GetService("Workspace")["NPC DAMAGE"].Kaidou.HumanoidRootPart.Anchored = true
+end
 else
-game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Anchored = false
-end
+game:GetService("Workspace")["NPC DAMAGE"].Kaidou.HumanoidRootPart.Anchored = false
 end)
-end
 end
 end)
      drops:Button("🌟One Shot Click",function()
