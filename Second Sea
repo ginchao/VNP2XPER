@@ -34,7 +34,7 @@ if find then
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".                                              ".." Your Server Have Premium  [⭐"..find.."]","Thanks ".."⭐"..find)  
   end
   local serv = win:Server("VNP2 X ⭐Premium", "")  
-  local drops = serv:Channel("Farm And LocalPlayer")  
+  local drops = serv:Channel("Farm+LocalPlayer")  
   local questlist = {}
 local quest = nil   
 for i, v in pairs(Workspace["NPC DAMAGE"]:GetChildren()) do
@@ -406,7 +406,7 @@ end)
 end
 end)
      
-local tgls = serv:Channel("NPC")
+local tgls = serv:Channel("SHOP")
 local bb = nil
 local tgl = tgls:Dropdown("Choose Bag", {"Beli 100k [ sell ]","Beli 1m [ sell ]","Beli 10M [ sell ]","Beli 100M [ sell ]",} , function(y)
 bb = y
@@ -493,7 +493,7 @@ end
 end
  end) 
 
-      local drops = serv:Channel("Weapon And Fast Attack")  
+      local drops = serv:Channel("Weapon+Fast Attack")  
   local Weaponlist = {}  
   local Weapon = nil  
   for i, v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
@@ -930,7 +930,7 @@ if brin == false then v2:Disconnect() end
     end    
     end   
     end)  
- local drops = serv:Channel("Player2") 
+ local drops = serv:Channel("Hitbox | Beta") 
  
     local plrlist = {}  
   local plr = nil  
