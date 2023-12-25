@@ -415,9 +415,8 @@ if bb == nil then
 DiscordLib:Notification("Warning", "Choose To Buy Or Load Map", "Ok")
 else
 getgenv().BuyBag = a
-while BuyBag do wait()
+while BuyBag do task.wait()
 fireclickdetector(game:GetService("Workspace")["Star Island [ Lv 20000+ ]"].Bank[bb].ClickDetector)
-wait()
 end
 end
 end)
