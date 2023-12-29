@@ -115,26 +115,7 @@ end
 end)
 end
 end)
-     drops:Button("🌟One Shot Click",function()
-if quest == nil then   
-   DiscordLib:Notification("Warning", "Choose Mob To One shot", "Ok")   
-   elseif quest ~= nil then
-while task.wait() do 
-sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
-game:GetService("Workspace")["NPC DAMAGE"][quest].Head:Destroy()
-end
-end
-end)
-drops:Button("🌟Power Click",function()
-for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
- if v:IsA("Tool") and v:FindFirstChild("Hitbox") then 
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
-for i = 1,300 do
- v.Hitbox:FireServer(math.huge,math.huge) 
-end
-end
-end
-end)
+     
 drops:Button("Base Sky", function()   
 
     local box = Instance.new("Part") box.Parent = workspace box.Anchored = true box.CanCollide = true box.Name = "Testhub" box.Size = Vector3.new(100000,2,1000000) box.Position = Vector3.new(100,100000,100) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Testhub.CFrame*CFrame.new(0,15,0)
