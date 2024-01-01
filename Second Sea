@@ -246,7 +246,88 @@ drops:Toggle("Grabtools",false, function(I)
  end 
  end 
  end) 
- end) 
+ end)
+local drops = serv:Channel("⭐Check And Fake Item")
+local check = nil
+local plrlist = {}
+for i, v in pairs(game.Players:GetPlayers()) do
+table.insert(plrlist,v.Name)
+end
+local ck = drops:Dropdown("Check Item Storage",plrlist,function(a)
+check = a
+if check == "ginchao2" or check == "Evil_NinjaDevil" then
+DiscordLib:Notification("Warning", "?", "Ok")
+end
+end)
+drops:Button("Refresh Player",function()
+ck:Clear()
+for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+ck:Add(v.Name)
+end
+end)
+drops:Seperator()
+drops:Button("Check Devil Fruit",function()
+if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok") 
+else
+for i, c in pairs(game.Players[check].storedata:GetChildren()) do
+Notif.New(c.Value,3)
+end
+end
+end)
+drops:Button("Check Weapon And Armor",function()
+if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok") 
+else
+for i, c in pairs(game.Players[check].storedata1:GetChildren()) do
+Notif.New(c.Value,3)
+end
+end
+end)
+drops:Button("Check Melee",function()
+if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok") 
+else
+for i, c in pairs(game.Players[check].storedata2:GetChildren()) do
+Notif.New(c.Value,3)
+end
+end
+end)
+drops:Button("Check Level And Beli",function()
+local lvl = game.Players[check].Data.Levels.Value
+local bl = game.Players[check].Data.Belis.Value
+if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok") 
+else
+DiscordLib:Notification("Noitification","Level:"..lvl.." | Beli:"..bl , "Ok")
+end
+end)
+drops:Seperator()
+drops:Textbox("Fake Level", "Type here!", true, function(t)
+game:GetService("RunService").RenderStepped:Connect(function()
+game.Players.LocalPlayer.Data.Levels.Value = t
+end)
+end)
+drops:Textbox("Fake Beli", "Type here!", true, function(t)
+game:GetService("RunService").RenderStepped:Connect(function()
+game.Players.LocalPlayer.Data.Belis.Value = t
+end)
+end)
+drops:Button("Get All Item But Fake",Color3.fromRGB(255,1,1),function()
+-- Get all Melee
+        for i,v in pairs(game:GetService("ReplicatedStorage").Library:GetChildren()) do
+             local clonefake = v:Clone()
+			clonefake.Parent = game.Players.LocalPlayer.Backpack
+        end
+
+-- Get all Sword
+        for i,v in pairs(game:GetService("ReplicatedStorage").Library3:GetChildren()) do
+             local clonefake = v:Clone()
+			clonefake.Parent = game.Players.LocalPlayer.Backpack
+        end
+
+-- Get all Fruit
+        for i,v in pairs(game:GetService("ReplicatedStorage").Library2:GetChildren()) do
+            local clonefake = v:Clone()
+		    clonefake.Parent = game.Players.LocalPlayer.Backpack
+        end
+end)
   local tgls = serv:Channel("Stats+Auto Skill") 
   tgls:Toggle("Auto Sword",false, function(z) 
  getgenv().autostats = z 
@@ -1359,31 +1440,7 @@ end)
    local serv = win:Server("Beta Test🌟", "rbxasset://textures/ui/Chat/MessageCounter.png") 
   
   local chat = game.Players.LocalPlayer.Name  
-  local drops = serv:Channel("🌟Players Test")  
-  local Weaponlist = {}  
-  local Weapon = nil  
-  for i, v in pairs(game:GetService("Players"):GetChildren()) do  
-  table.insert(Weaponlist,"Level".."."..v.Data.Levels.Value.."          "..v.Name.."          ".."HP"..":"..v.Character.Humanoid.Health)  
-  end  
-  local drop = drops:Dropdown("Pick me!", Weaponlist, function(cu)  
-  for i, v in pairs(game.Players:GetPlayers()) do  
-  if cu == v.Name then  
-  Weapon = cu  
-  end  
-  end  
-  end)  
-  drops: Button("Refresh Players", function()  
-  drop:Clear()  
-  for i,v in pairs(game.Players: GetChildren()) do  
-  if v.Data:FindFirstChild("Levels") then  
-  drop:Add("Level".."."..v.Data.Levels.Value.."          "..v.Name.."          ".."HP"..":"..v.Character.Humanoid.Health)  
-  end  
-  end  
-  end)  
-  for i, c in pairs(game.Players:GetChildren()) do  
-if c.Name ~= "ginchao12" then drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value) 
-  end 
-end
+
  local drops = serv:Channel("🌟Players Testv2") 
  for i, c in pairs(game.Players:GetChildren()) do   
  if c.Name ~= "ginchao12" then 
