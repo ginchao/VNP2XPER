@@ -254,9 +254,10 @@ for i, v in pairs(game.Players:GetPlayers()) do
 table.insert(plrlist,v.Name)
 end
 local ck = drops:Dropdown("Check Item Storage",plrlist,function(a)
-check = a
 if check == "ginchao12" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" then
 DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
+else
+check = a
 end
 end)
 drops:Button("Refresh Player",function()
