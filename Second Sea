@@ -255,8 +255,8 @@ table.insert(plrlist,v.Name)
 end
 local ck = drops:Dropdown("Check Item Storage",plrlist,function(a)
 check = a
-if check == "ginchao2" or check == "Evil_NinjaDevil" then
-DiscordLib:Notification("Warning", "?", "Ok")
+if check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" then
+DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
 end
 end)
 drops:Button("Refresh Player",function()
