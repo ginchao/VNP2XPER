@@ -407,11 +407,13 @@ while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
 end
 end)
-tgls:Toggle("Auto Buy God Box",false, function(v) 
+tgls:Toggle("⭐Auto Buy God Box X5",false, function(v) 
 getgenv().autoyoruv3 = v 
  while autoyoruv3 do task.wait()
- pcall(function() 
+ pcall(function()
+for _ = 1,5 do
  fireclickdetector(game:GetService("Workspace")["Platinum Town [ 2000 - 3000 ]"].PlatinumMAP.GodBox.ClickDetector)
+end
  end) 
  end 
  end) 
