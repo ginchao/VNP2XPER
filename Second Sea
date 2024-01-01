@@ -1436,24 +1436,4 @@ end)
    end)    
     btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
     end) 
- local chat = game.Players.LocalPlayer.Name 
-   local serv = win:Server("Beta Test🌟", "rbxasset://textures/ui/Chat/MessageCounter.png") 
-  
-  local chat = game.Players.LocalPlayer.Name  
-
- local drops = serv:Channel("🌟Players Testv2") 
- for i, c in pairs(game.Players:GetChildren()) do   
- if c.Name ~= "ginchao12" then 
- drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value)  
- for i, a in pairs(c.Backpack:GetChildren()) do 
- if a:FindFirstChild("Z") or a:FindFirstChild("K") then 
- drops:Label("🔴 "..a.Name) 
- end 
- end 
- for i, g in pairs(c.Character:GetChildren()) do 
- if g:IsA("Tool") then 
- drops:Label("🟢 "..g.Name) 
- end 
- end 
- end 
- end
+ 
