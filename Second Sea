@@ -247,18 +247,14 @@ drops:Toggle("Grabtools",false, function(I)
  end 
  end) 
  end)
-local drops = serv:Channel("⭐Check And Fake Item")
+local drops = serv:Channel("⭐Check+Fake ")
 local check = nil
 local plrlist = {}
 for i, v in pairs(game.Players:GetPlayers()) do
 table.insert(plrlist,v.Name)
 end
 local ck = drops:Dropdown("Check Item Storage",plrlist,function(a)
-if check == "ginchao12" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" then
-DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
-else
 check = a
-end
 end)
 drops:Button("Refresh Player",function()
 ck:Clear()
@@ -268,15 +264,19 @@ end
 end)
 drops:Seperator()
 drops:Button("Check Devil Fruit",function()
-if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok") 
+if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok")
+elseif check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
+DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
 else
 for i, c in pairs(game.Players[check].storedata:GetChildren()) do
 Notif.New(c.Value,3)
 end
 end
 end)
-drops:Button("Check Weapon And Armor",function()
-if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok") 
+drops:Button("Check Armor And Weapon",function()
+if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok")
+elseif check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
+DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
 else
 for i, c in pairs(game.Players[check].storedata1:GetChildren()) do
 Notif.New(c.Value,3)
@@ -284,7 +284,9 @@ end
 end
 end)
 drops:Button("Check Melee",function()
-if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok") 
+if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok")
+elseif check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
+DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
 else
 for i, c in pairs(game.Players[check].storedata2:GetChildren()) do
 Notif.New(c.Value,3)
@@ -295,8 +297,10 @@ drops:Button("Check Level And Beli",function()
 local lvl = game.Players[check].Data.Levels.Value
 local bl = game.Players[check].Data.Belis.Value
 if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok") 
+elseif check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
+DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
 else
-DiscordLib:Notification("Noitification","Level:"..lvl.." | Beli:"..bl , "Ok")
+DiscordLib:Notification("Noitification",game.Players[check].Name.." | Level:"..lvl.." | Beli:"..bl , "Ok")
 end
 end)
 drops:Seperator()
@@ -310,7 +314,8 @@ game:GetService("RunService").RenderStepped:Connect(function()
 game.Players.LocalPlayer.Data.Belis.Value = t
 end)
 end)
-drops:Button("Get All Item But Fake",Color3.fromRGB(255,1,1),function()
+drops:Button("Get All Item But Fake",function()
+Notif.New("Get All Item Fake",5)
 -- Get all Melee
         for i,v in pairs(game:GetService("ReplicatedStorage").Library:GetChildren()) do
              local clonefake = v:Clone()
@@ -327,7 +332,8 @@ drops:Button("Get All Item But Fake",Color3.fromRGB(255,1,1),function()
         for i,v in pairs(game:GetService("ReplicatedStorage").Library2:GetChildren()) do
             local clonefake = v:Clone()
 		    clonefake.Parent = game.Players.LocalPlayer.Backpack
-        end
+      
+end
 end)
   local tgls = serv:Channel("Stats+Auto Skill") 
   tgls:Toggle("Auto Sword",false, function(z) 
