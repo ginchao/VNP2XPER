@@ -250,6 +250,18 @@ drops:Toggle("Grabtools",false, function(I)
 local drops = serv:Channel("⭐Check+Fake ")
 local check = nil
 local plrlist = {}
+local chanck = {"ginchao12","Evil_NinjaDevil","ZzKenKK1","Thanhnha161"}
+function chan(se)
+for i, v3 in pairs(game.Players:GetPlayers()) do
+for i, v in pairs(chanck) do
+if v3.Name == v then
+se = v
+print(se.."❌")
+end
+end
+end
+return se
+end
 for i, v in pairs(game.Players:GetPlayers()) do
 table.insert(plrlist,v.Name)
 end
@@ -265,8 +277,8 @@ end)
 drops:Seperator()
 drops:Button("Check Devil Fruit",function()
 if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok")
-elseif check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
-DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
+elseif check == chan() then
+DiscordLib:Notification("Warning", "Can't Check❌", "Ok")
 else
 for i, c in pairs(game.Players[check].storedata:GetChildren()) do
 Notif.New(c.Value,3)
@@ -275,8 +287,8 @@ end
 end)
 drops:Button("Check Armor And Weapon",function()
 if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok")
-elseif check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
-DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
+elseif check == chan() then
+DiscordLib:Notification("Warning", "Can't Check❌", "Ok")
 else
 for i, c in pairs(game.Players[check].storedata1:GetChildren()) do
 Notif.New(c.Value,3)
@@ -285,8 +297,8 @@ end
 end)
 drops:Button("Check Melee",function()
 if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok")
-elseif check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
-DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
+elseif check == chan() then
+DiscordLib:Notification("Warning", "Can't Check❌", "Ok")
 else
 for i, c in pairs(game.Players[check].storedata2:GetChildren()) do
 Notif.New(c.Value,3)
@@ -297,8 +309,8 @@ drops:Button("Check Level And Beli",function()
 local lvl = game.Players[check].Data.Levels.Value
 local bl = game.Players[check].Data.Belis.Value
 if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok") 
-elseif check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
-DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
+elseif check == chan() then
+DiscordLib:Notification("Warning", "Can't Check❌", "Ok")
 else
 DiscordLib:Notification("Noitification",game.Players[check].Name.." | Level:"..lvl.." | Beli:"..bl , "Ok")
 end
