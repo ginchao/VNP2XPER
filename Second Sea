@@ -1465,7 +1465,7 @@ end)
 drops:Label("🟢 1 Beli = 90%".." Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") 
 drops:Label("🔵 1B = 0,00001%")
 drops:Label("🔴 Elemental = 0,000003%")
-drops:Label("🔴 UpHubX20BuyV2 Vĩnh Viễn= 0,0000001%") drops:Label("🔴 YoruV3= 0,000009%") drops:Label("🟣 Item Tự Chọn = 0,000001%")
+drops:Label("🔴 UpHubX20BuyV2 Vĩnh Viễn = 0,0000001%") drops:Label("🔴 YoruV3 = 0,000009%") drops:Label("🟣 Item Tự Chọn = 0,000001%")
 drops:Button("Quay Event",function()
 count = count + 1
 local gifts = {
