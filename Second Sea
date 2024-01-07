@@ -1456,7 +1456,6 @@ end)
     btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
     end) 
 local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
-local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
 local count = 0
 local drops = serv:Channel("Event 🌟 Đã Tăng Tỉ Lệ Ra")
 drops:Button("CopyLinkFb Người Phát Quà",function()
@@ -1527,7 +1526,7 @@ HttpService = game:GetService("HttpService")
  })
 end
 end)
-drops:Toggle("Quay Event",false,function(v)
+drops:Toggle("Auto Quay Event Nhanh [Limited Time!]",false,function(v)
 getgenv().autoev = v
 while autoev do task.wait()
 count = count + 1
@@ -1590,21 +1589,5 @@ HttpService = game:GetService("HttpService")
 end
 end
 end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 drops:Seperator()
 drops:Label("Rớt Item Sẽ Hiện Bên Dưới ↓:")
