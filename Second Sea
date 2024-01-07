@@ -1455,21 +1455,7 @@ end)
    end)    
     btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
     end) 
-local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
-local count = 0
-"type"] = "rich", 
- ["color"] = tonumber(0xffffff), 
- ["fields"] = { 
- { 
- ["name"] = "Join Sever | Nhấn Giữ Bên Dưới Để Copy Script:", 
- ["value"] = "game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,'"..game.JobId.."')", 
- ["inline"] = true }
- } 
- }} 
- }) 
- })
-end
-end)
+
 local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
 local count = 0
 local drops = serv:Channel("Event 🌟 0,000000")
