@@ -1521,4 +1521,4 @@ HttpService = game:GetService("HttpService")
 end
 end)
 drops:Seperator()
-drops:Label("Item đỏ trở lên sẽ hiện dưới đây↓:")
+drops:Label("Rớt Item Sẽ Hiện Bên Dưới ↓:")
