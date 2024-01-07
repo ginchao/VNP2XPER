@@ -1456,13 +1456,16 @@ end)
     btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
     end) 
 local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
+local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
+local count = 0
 local drops = serv:Channel("Event 🌟 Đã Tăng Tỉ Lệ Ra")
 drops:Button("CopyLinkFb Người Phát Quà",function()
 setclipboard("https://www.facebook.com/vanduysama?mibextid=LQQJ4d")
 end)
-drops:Label("🟢 = 90%".." Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") drops:Label("🔴 Elemental = 0,000003%")
+drops:Label("🟢 1 Beli = 90%".." Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") 
+drops:Label("🔵 1B = 0,00001%")
+drops:Label("🔴 Elemental = 0,000003%")
 drops:Label("🔴 UpHubX20BuyV2 Vĩnh Viễn= 0,0000001%") drops:Label("🔴 YoruV3= 0,000009%") drops:Label("🟣 Item Tự Chọn = 0,000001%")
-local count = 0
 drops:Button("Quay Event",function()
 count = count + 1
 local gifts = {
@@ -1470,7 +1473,8 @@ local gifts = {
   {name = "🟣 Item Tự Chọn", prob = 0.000001}, -- 0,0000001% chance
   {name = "🔴 YoruV3", prob = 0.000009}, -- 0,0000009% chance
   {name = "🔴 Elemental", prob = 0.000003}, -- 0,0000003% chance
-  {name = "🟢 Nothing", prob = 0.9} -- 90% chance
+  {name = "🔵 1B Beli", prob = 0.00001}, 
+  {name = "🟢 1 Beli", prob = 0.9} -- 90% chance
 }
 local total_prob = 0
 for i, gift in ipairs(gifts) do
@@ -1485,7 +1489,7 @@ for i, gift in ipairs(gifts) do
   end
   random_value = random_value - gift.prob
 end
-if selected_gift.name == "🟢 Nothing" then
+if selected_gift.name == "🟢 1 Beli" then
 Notif.New("Bạn Quay Trúng "..selected_gift.name.."["..count.."]",3)
 else
 Notif.New("Bạn Quay Trúng "..selected_gift.name,1.3)
