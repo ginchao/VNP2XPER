@@ -1456,18 +1456,18 @@ end)
     btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
     end) 
 local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
-local drops = serv:Channel("Event 🌟")
+local drops = serv:Channel("Event 🌟 Đã Tăng Tỉ Lệ Ra")
 drops:Button("CopyLinkFb Người Phát Quà",function()
 setclipboard("https://www.facebook.com/vanduysama?mibextid=LQQJ4d")
 end)
-drops:Label("🟢 = 90%".." Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") drops:Label("🔴 Elemental = 0,00000090%")
-drops:Label("🔴 UpHubX20Buy 10 day = 0,00001%") drops:Label("🔴 YoruV3= 0,0000009%") drops:Label("🟣 Item Tự Chọn = 0,00000050%")
+drops:Label("🟢 = 90%".." Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") drops:Label("🔴 Elemental = 0,000003%")
+drops:Label("🔴 UpHubX20Buy 10 day = 0,00001%") drops:Label("🔴 YoruV3= 0,000009%") drops:Label("🟣 Item Tự Chọn = 0,000001%")
 drops:Button("Quay Event",function()
 local gifts = {
   {name = "🔴 X20AllBUY", prob = 0.00001}, -- 0,00001% chance
-  {name = "🟣 Item Tự Chọn", prob = 0.00000050}, -- 0,0000001% chance
-  {name = "🔴 YoruV3", prob = 0.0000009}, -- 0,0000009% chance
-  {name = "🔴 Elemental", prob = 0.00000090}, -- 0,0000003% chance
+  {name = "🟣 Item Tự Chọn", prob = 0.000001}, -- 0,0000001% chance
+  {name = "🔴 YoruV3", prob = 0.000009}, -- 0,0000009% chance
+  {name = "🔴 Elemental", prob = 0.000003}, -- 0,0000003% chance
   {name = "🟢 Nothing", prob = 0.9} -- 90% chance
 }
 local total_prob = 0
