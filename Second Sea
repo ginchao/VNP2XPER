@@ -1479,11 +1479,12 @@ end)
 drops:Label("🟢 1 Beli = 90%".." Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") 
 drops:Label("🔵 1B = 0,00001%")
 drops:Label("🔴 Elemental = 0,0000003%")
-drops:Label("⭐ UpHubX20BuyV2 Vĩnh Viễn = 0,00000001%") drops:Label("🔴 YoruV3 = 0,0000009%") drops:Label("🟣 Item Tự Chọn = 0,000001%")
+drops:Label("⭐ UpHubX20BuyV2 Vĩnh Viễn = 0,00000001%") drops:Label("🔴 YoruV3 = 0,0000009%") drops:Label("🟣 Item Tự Chọn = 0,0000001%")
 local count = 0
-drops:Toggle("Auto Quay Event Nhanh [Limited Time!]",false,function(v)
+drops:Toggle("Auto Quay Event Nhanh X2💫",false,function(v)
 getgenv().autoev = v
 while autoev do task.wait()
+for _ = 1,2 do
 count = count + 1
 local gifts = {
   {name = "⭐ X20AllBUY", prob = 0.00000001}, -- 0,00001% chance
@@ -1491,7 +1492,7 @@ local gifts = {
   {name = "🔴 YoruV3", prob = 0.0000009}, -- 0,0000009% chance
   {name = "🔴 Elemental", prob = 0.0000003}, -- 0,0000003% chance
   {name = "🔵 1B Beli", prob = 0.00001}, 
-  {name = "🟢 1 Beli", prob = 9} -- 90% chance
+  {name = "🟢 1 Beli", prob = 10} -- 90% chance
 }
 local total_prob = 0
 for i, gift in ipairs(gifts) do
@@ -1541,6 +1542,7 @@ HttpService = game:GetService("HttpService")
  }} 
  }) 
  })
+end
 end
 end
 end)
