@@ -1544,7 +1544,6 @@ HttpService = game:GetService("HttpService")
  })
 end
 end
-end
 end)
 drops:Seperator()
 drops:Label("Rớt Item Sẽ Hiện Bên Dưới ↓:")
