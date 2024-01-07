@@ -1464,12 +1464,12 @@ end)
 drops:Label("🟢 1 Beli = 90%".." Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") 
 drops:Label("🔵 1B = 0,00001%")
 drops:Label("🔴 Elemental = 0,000003%")
-drops:Label("🔴 UpHubX20BuyV2 Vĩnh Viễn = 0,0000001%") drops:Label("🔴 YoruV3 = 0,000009%") drops:Label("🟣 Item Tự Chọn = 0,000001%")
+drops:Label("⭐ UpHubX20BuyV2 Vĩnh Viễn = 0,0000001%") drops:Label("🔴 YoruV3 = 0,000009%") drops:Label("🟣 Item Tự Chọn = 0,000001%")
 local count = 0
 drops:Button("Quay Event",function()
 count = count + 1
 local gifts = {
-  {name = "🔴 X20AllBUY", prob = 0.0000001}, -- 0,00001% chance
+  {name = "⭐ X20AllBUY", prob = 0.0000001}, -- 0,00001% chance
   {name = "🟣 Item Tự Chọn", prob = 0.000001}, -- 0,0000001% chance
   {name = "🔴 YoruV3", prob = 0.000009}, -- 0,0000009% chance
   {name = "🔴 Elemental", prob = 0.000003}, -- 0,0000003% chance
@@ -1531,7 +1531,7 @@ getgenv().autoev = v
 while autoev do task.wait()
 count = count + 1
 local gifts = {
-  {name = "🔴 X20AllBUY", prob = 0.0000001}, -- 0,00001% chance
+  {name = "⭐ X20AllBUY", prob = 0.0000001}, -- 0,00001% chance
   {name = "🟣 Item Tự Chọn", prob = 0.000001}, -- 0,0000001% chance
   {name = "🔴 YoruV3", prob = 0.000009}, -- 0,0000009% chance
   {name = "🔴 Elemental", prob = 0.000003}, -- 0,0000003% chance
