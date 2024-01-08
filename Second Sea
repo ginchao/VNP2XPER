@@ -1484,8 +1484,8 @@ drops:Label("🔴 Sukuna = "..suku)
 drops:Label("🟣 5B = "..namty)
 drops:Label("🟣 Item Tự Chọn = "..tuchon)
 drops:Label("⭐ 10B = "..muoiB)
-drops:Label("🌟 Unlock Oneshot"..ones)
-drops:Label("🌟 Unlock CopyItem 1Day"..cop)
+drops:Label("🌟 Unlock Oneshot = "..ones)
+drops:Label("🌟 Unlock CopyItem 1Day = "..cop)
 local count = 0
 drops:Toggle("Auto Quay Event [Trung Bình]",false,function(v)
 getgenv().autoev = v
