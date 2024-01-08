@@ -28,7 +28,7 @@ end
 ---------------
 
   local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()   
-   local win = DiscordLib:Window("[Test Hub X Premium⭐] ")   
+   local win = DiscordLib:Window("[Test Hub X Premium⭐] ".."Tất Cả Auto Buy Được Nâng Cấp Bởi Rex_features")   
 local per = game:GetService("Players").LocalPlayer.Name
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
  
@@ -250,7 +250,7 @@ drops:Toggle("Grabtools",false, function(I)
 local drops = serv:Channel("⭐Check+Fake ")
 local check = nil
 local plrlist = {}
-local chanck = {"ginchao12","Evil_NinjaDevil","ZzKenKK1","Thanhnha161"}
+local chanck = {"ginchao12","Evil_NinjaDevil","ZzKenKK1","Rex_features"}
 function chan(se)
 for i, v3 in pairs(game.Players:GetPlayers()) do
 for i, v in pairs(chanck) do
@@ -507,33 +507,37 @@ while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
 end
 end)
-tgls:Toggle("Auto Buy God Box ↓",false, function(v) 
+tgls:Toggle("Auto Buy God Box X20⭐",false, function(v) 
 getgenv().autogod = v 
  while autogod do task.wait()
  pcall(function()
-for _ = 1,1 do
+for _ = 1,20 do
  fireclickdetector(game:GetService("Workspace")["Platinum Town [ 2000 - 3000 ]"].PlatinumMAP.GodBox.ClickDetector)
 end
  end) 
  end 
  end) 
- tgls:Toggle("Auto Buy Fruit",false, function(v) 
+ tgls:Toggle("Auto Buy Fruit X20⭐",false, function(v) 
  getgenv().auto = v
  spawn(function() 
  while auto do task.wait() 
+for _ = 1,20 do
  for i, v in pairs(game:GetService("Workspace")["Marine Island [ 3000 - 5000 ]"]:GetChildren()) do
 if v:FindFirstChild("Meshes/DeadsAccessoryB") then
 fireclickdetector(v.RANDOM)
 end
 end
+end
  end 
  end)
  end) 
- tgls:Toggle("Auto Buy Secret Fruit",false, function(v) 
+ tgls:Toggle("Auto Buy Secret Fruit X20⭐",false, function(v) 
  getgenv().auto1 = v
  spawn(function() 
  while auto1 do task.wait() 
+for _ = 1,20 do
  fireclickdetector(game:GetService("Workspace")["Marine Island [ 3000 - 5000 ]"]["Secret Random"].RANDOM)
+end
  end 
  end) 
  end) 
@@ -1454,31 +1458,37 @@ end)
     btns:Button("FlyV3", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()   
    end)    
     btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
-    end) 
-
+    end)
 local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
+local Yoruv3 = 0.0000009
+local Elemental = 0.0000007
+local tuchon = 0.0000005
+local motB = 0.000006
+local muoiB = 0.0000001
 local count = 0
-local drops = serv:Channel("Event 🌟 0,000000")
+local drops = serv:Channel("Event 🌟 X2 Luck☘️")
 drops:Button("CopyLinkFb Người Phát Quà",function()
 setclipboard("https://www.facebook.com/vanduysama?mibextid=LQQJ4d")
 end)
 drops:Label("🟢 1 Beli = 90%".." | Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") 
-drops:Label("🔵 1B = 0,000005%")
-drops:Label("🔴 Elemental = 0,0000003%")
-drops:Label("⭐ UpHubX20BuyV2 Vĩnh Viễn = 0,00000001%") drops:Label("🔴 YoruV3 = 0,0000009%") drops:Label("🟣 Item Tự Chọn = 0,000001%")
+drops:Label("🔵 1B = "..motB)
+drops:Label("🔴 Elemental = "..Elemental)
+drops:Label("🔴 YoruV3 = "..Yoruv3) 
+drops:Label("🟣 Item Tự Chọn = "..tuchon)
+drops:Label("⭐ 10B = "..muoiB)
 local count = 0
-drops:Toggle("Auto Quay Event Nhanh X3💫",false,function(v)
+drops:Toggle("Auto Quay Event [Trung Bình]",false,function(v)
 getgenv().autoev = v
-while autoev do task.wait()
-for _ = 1,3 do
+while autoev do wait()
+for _ = 1,1 do
 count = count + 1
 local gifts = {
-  {name = "⭐ X20AllBUY", prob = 0.00000009}, -- 0,00001% chance
-  {name = "🟣 Item Tự Chọn", prob = 0.0000001}, -- 0,0000001% chance
-  {name = "🔴 YoruV3", prob = 0.0000009}, -- 0,0000009% chance
-  {name = "🔴 Elemental", prob = 0.0000003}, -- 0,0000003% chance
-  {name = "🔵 1B Beli", prob = 0.000005}, 
-  {name = "🟢 1 Beli", prob = 0.9} -- 90% chance
+  {name = "🟣 Item Tự Chọn", prob = tuchon},
+  {name = "🔴 YoruV3", prob = Yoruv3}, 
+  {name = "🔴 Elemental", prob = Elemental}, 
+  {name = "🔵 1B Beli", prob = motB}, 
+  {name = "🟢 1 Beli", prob = 0.9},
+  {name = "⭐ 10B", prob = muoiB}
 }
 local total_prob = 0
 for i, gift in ipairs(gifts) do
@@ -1534,3 +1544,15 @@ end
 end)
 drops:Seperator()
 drops:Label("Rớt Item Sẽ Hiện Bên Dưới ↓:")
+
+
+
+
+
+
+
+
+
+
+
+
