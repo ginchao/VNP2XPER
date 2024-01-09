@@ -1487,7 +1487,7 @@ drops:Label("⭐ 10B = "..muoiB)
 drops:Label("🌟 Unlock Oneshot = "..ones)
 drops:Label("🌟 Unlock CopyItem 1Day = "..cop)
 local count = 0
-drops:Toggle("Auto Quay Event [Nhanh] X10✨",false,function(v)
+drops:Toggle("Auto Quay Event Trung] X10✨",false,function(v)
 getgenv().autoev = v
 while autoev do wait()
 for _ = 1,10 do
