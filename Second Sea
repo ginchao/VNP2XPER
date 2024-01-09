@@ -1471,7 +1471,7 @@ local suku = 0.0000007
 local namty = 0.0000004
 local cop = 0.0000000000001
 local count = 0
-local drops = serv:Channel("Event 🌟 X2 Luck☘️")
+local drops = serv:Channel("Event 🌟 -10 Luck☘️")
 drops:Button("CopyLinkFb Người Phát Quà",function()
 setclipboard("https://www.facebook.com/vanduysama?mibextid=LQQJ4d")
 end)
@@ -1487,17 +1487,17 @@ drops:Label("⭐ 10B = "..muoiB)
 drops:Label("🌟 Unlock Oneshot = "..ones)
 drops:Label("🌟 Unlock CopyItem 1Day = "..cop)
 local count = 0
-drops:Toggle("Auto Quay Event [Trung Bình]",false,function(v)
+drops:Toggle("Auto Quay Event [Nhanh] X10✨",false,function(v)
 getgenv().autoev = v
 while autoev do wait()
-for _ = 1,1 do
+for _ = 1,10 do
 count = count + 1
 local gifts = {
   {name = "🟣 Item Tự Chọn", prob = tuchon},
   {name = "🔴 YoruV3", prob = Yoruv3}, 
   {name = "🔴 Elemental", prob = Elemental}, 
   {name = "🔵 1B Beli", prob = motB}, 
-  {name = "🟢 1 Beli", prob = 0.9},
+  {name = "🟢 1 Beli", prob = 9},
   {name = "⭐ 10B", prob = muoiB},
   {name = "🌟 Unlock Oneshot", prob = ones},
   {name = "🔵 Tengen", prob = ten},
