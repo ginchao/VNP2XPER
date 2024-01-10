@@ -1487,9 +1487,9 @@ drops:Label("⭐ 10B = "..muoiB)
 drops:Label("🌟 Unlock Oneshot = "..ones)
 drops:Label("🌟 Unlock CopyItem 1Day = "..cop)
 local count = 0
-drops:Toggle("Auto Quay Event [Nhanh] X2✨",false,function(v)
+drops:Toggle("Auto Quay Event [Trung] X2✨",false,function(v)
 getgenv().autoev = v
-while autoev do task.wait()
+while autoev do wait()
 for _ = 1,2 do
 count = count + 1
 local gifts = {
@@ -1497,7 +1497,7 @@ local gifts = {
   {name = "🔴 YoruV3", prob = Yoruv3}, 
   {name = "🔴 Elemental", prob = Elemental}, 
   {name = "🔵 1B Beli", prob = motB}, 
-  {name = "🟢 1 Beli", prob = 0.5},
+  {name = "🟢 1 Beli", prob = 0.69},
   {name = "⭐ 10B", prob = muoiB},
   {name = "🌟 Unlock Oneshot", prob = ones},
   {name = "🔵 Tengen", prob = ten},
