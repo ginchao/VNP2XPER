@@ -1463,7 +1463,7 @@ local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
 local Yoruv3 = 0.0000009
 local Elemental = 0.0000007
 local tuchon = 0.0000005
-local motB = 0.0000009
+local motB = 0.0000050
 local muoiB = 0.00000001
 local ones = 0.000000001
 local ten = 0.0000009
@@ -1487,17 +1487,17 @@ drops:Label("⭐ 10B = "..muoiB)
 drops:Label("🌟 Unlock Oneshot = "..ones)
 drops:Label("🌟 Unlock CopyItem 1Day = "..cop)
 local count = 0
-drops:Toggle("Auto Quay Event [Nhanh] X3✨",false,function(v)
+drops:Toggle("Auto Quay Event [Nhanh]",false,function(v)
 getgenv().autoev = v
 while autoev do task.wait()
-for _ = 1,3 do
+for _ = 1,1 do
 count = count + 1
 local gifts = {
   {name = "🟣 Item Tự Chọn", prob = tuchon},
   {name = "🔴 YoruV3", prob = Yoruv3}, 
   {name = "🔴 Elemental", prob = Elemental}, 
   {name = "🔵 1B Beli", prob = motB}, 
-  {name = "🟢 1 Beli", prob = 0.60},
+  {name = "🟢 1 Beli", prob = 0.69},
   {name = "⭐ 10B", prob = muoiB},
   {name = "🌟 Unlock Oneshot", prob = ones},
   {name = "🔵 Tengen", prob = ten},
