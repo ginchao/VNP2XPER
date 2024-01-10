@@ -1501,7 +1501,7 @@ local gifts = {
   {name = "⭐ 10B", prob = muoiB},
   {name = "🌟 Unlock Oneshot", prob = ones},
   {name = "🔵 Tengen", prob = ten},
-  {name = "⭐ Sukuna", prob = suku},
+  {name = "🔴 Sukuna", prob = suku},
   {name = "🌟 Unlock CopyItem 1Day", prob = cop},
   {name = "🟣 5B", prob = namty}
 }
