@@ -1460,15 +1460,9 @@ end)
     btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
     end)
 local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
-local Yoruv3 = 0.0000009
-local Elemental = 0.0000007
-local tuchon = 0.0000005
-local motB = 0.0000010
-local muoiB = 0.00000001
 local ones = 0.000000001
-local ten = 0.0000009
-local suku = 0.0000007
-local namty = 0.0000001
+local Gon = 0.0000000001
+local Ang = 0.0000000001
 local cop = 0.0000000000001
 local count = 0
 local drops = serv:Channel("Event 🌟 0 Luck☘️")
@@ -1476,14 +1470,8 @@ drops:Button("CopyLinkFb Người Phát Quà",function()
 setclipboard("https://www.facebook.com/vanduysama?mibextid=LQQJ4d")
 end)
 drops:Label("🟢 1 Beli = 90%".." | Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") 
-drops:Label("🔵 1B = "..motB)
-drops:Label("🔵 Ten = "..ten)
-drops:Label("🔴 Elemental = "..Elemental)
-drops:Label("🔴 YoruV3 = "..Yoruv3)
-drops:Label("🔴 Sukuna = "..suku) 
-drops:Label("🟣 5B = "..namty)
-drops:Label("🟣 Item Tự Chọn = "..tuchon)
-drops:Label("⭐ 10B = "..muoiB)
+drops:Label("🟡 Angle = "..tuchon)
+drops:Label("Gon = "..muoiB)
 drops:Label("🌟 Unlock Oneshot = "..ones)
 drops:Label("🌟 Unlock CopyItem 1Day = "..cop)
 local count = 0
@@ -1493,17 +1481,12 @@ while autoev do task.wait()
 for _ = 1,2 do
 count = count + 1
 local gifts = {
-  {name = "🟣 Item Tự Chọn", prob = tuchon},
-  {name = "🔴 YoruV3", prob = Yoruv3}, 
-  {name = "🔴 Elemental", prob = Elemental}, 
-  {name = "🔵 1B Beli", prob = motB}, 
-  {name = "🟢 1 Beli", prob = 1},
-  {name = "⭐ 10B", prob = muoiB},
+  
   {name = "🌟 Unlock Oneshot", prob = ones},
-  {name = "🔵 Tengen", prob = ten},
-  {name = "🔴 Sukuna", prob = suku},
+  {name = "🟢 1 Beli", prob = 1},
+  {name = "🟡 Angle", prob = Ang},
   {name = "🌟 Unlock CopyItem 1Day", prob = cop},
-  {name = "🟣 5B", prob = namty}
+  {name = "🟡 Gon", prob = Gon}
 }
 local total_prob = 0
 for i, gift in ipairs(gifts) do
