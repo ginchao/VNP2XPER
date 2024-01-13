@@ -511,7 +511,7 @@ tgls:Toggle("Auto Buy God Box X20⭐",false, function(v)
 getgenv().autogod = v 
  while autogod do task.wait()
  pcall(function()
-for _ = 1,20 do
+for _ = 1,1 do
  fireclickdetector(game:GetService("Workspace")["Platinum Town [ 2000 - 3000 ]"].PlatinumMAP.GodBox.ClickDetector)
 end
  end) 
