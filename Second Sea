@@ -535,7 +535,7 @@ end
  getgenv().auto1 = v
  spawn(function() 
  while auto1 do task.wait() 
-for _ = 1,20 do
+for _ = 1,1 do
  fireclickdetector(game:GetService("Workspace")["Marine Island [ 3000 - 5000 ]"]["Secret Random"].RANDOM)
 end
  end 
