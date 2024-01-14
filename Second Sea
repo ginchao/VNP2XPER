@@ -28,7 +28,7 @@ end
 ---------------
 
   local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()   
-   local win = DiscordLib:Window("[Test Hub X Premium⭐] ".."Tất Cả Auto Buy Được Nâng Cấp Bởi Rex_features")   
+   local win = DiscordLib:Window("[Test Hub X Premium⭐] ".."")   
 local per = game:GetService("Players").LocalPlayer.Name
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
  
@@ -250,7 +250,7 @@ drops:Toggle("Grabtools",false, function(I)
 local drops = serv:Channel("⭐Check+Fake ")
 local check = nil
 local plrlist = {}
-local chanck = {"ginchao12","Evil_NinjaDevil","ZzKenKK1","Rex_features"}
+local chanck = {"ginchao12","Evil_NinjaDevil","ZzKenKK1","Rx_features"}
 function chan(se)
 for i, v3 in pairs(game.Players:GetPlayers()) do
 for i, v in pairs(chanck) do
