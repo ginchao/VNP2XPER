@@ -507,7 +507,7 @@ while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
 end
 end)
-tgls:Toggle("Auto Buy God Box X20⭐",false, function(v) 
+tgls:Toggle("Auto Buy God Box",false, function(v) 
 getgenv().autogod = v 
  while autogod do task.wait()
  pcall(function()
@@ -517,11 +517,11 @@ end
  end) 
  end 
  end) 
- tgls:Toggle("Auto Buy Fruit X20⭐",false, function(v) 
+ tgls:Toggle("Auto Buy Fruit",false, function(v) 
  getgenv().auto = v
  spawn(function() 
  while auto do task.wait() 
-for _ = 1,20 do
+for _ = 1,1 do
  for i, v in pairs(game:GetService("Workspace")["Marine Island [ 3000 - 5000 ]"]:GetChildren()) do
 if v:FindFirstChild("Meshes/DeadsAccessoryB") then
 fireclickdetector(v.RANDOM)
@@ -531,7 +531,7 @@ end
  end 
  end)
  end) 
- tgls:Toggle("Auto Buy Secret Fruit X20⭐",false, function(v) 
+ tgls:Toggle("Auto Buy Secret Fruit",false, function(v) 
  getgenv().auto1 = v
  spawn(function() 
  while auto1 do task.wait() 
