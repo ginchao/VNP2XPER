@@ -1467,11 +1467,11 @@ local cop = 0.0000000000001
 local count = 0
 local drops = serv:Channel("Event 🌟 0 Luck☘️")
 drops:Button("CopyLinkFb Người Phát Quà",function()
-setclipboard("https://www.facebook.com/vanduysama?mibextid=LQQJ4d")
+setclipboard("https://www.facebook.com/profile.php?id=100071008904956&mibextid=ZbWKwL")
 end)
 drops:Label("🟢 1 Beli = 90%".." | Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") 
 drops:Label("🟡 Angle = 0,0000000001")
-drops:Label("Gon = 0.00000000001")
+drops:Label("🟡Gon = 0.00000000001")
 drops:Label("🌟 Unlock Oneshot = "..ones)
 drops:Label("🌟 Unlock CopyItem 1Day = "..cop)
 local count = 0
