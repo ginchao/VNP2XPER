@@ -623,7 +623,69 @@ end)
                   end  
           end  
   end)  
-  
+  local UserInputService = game:GetService("UserInputService")
+local mouse = game:GetService("Players").LocalPlayer:GetMouse()
+drops:Toggle("Fast Attack👆",false,function(h)
+getgenv().tunhan = h
+local tapCount = 0 -- biến để đếm số lần nhấn
+
+UserInputService.TouchTapInWorld:Connect(function(position, processedByUI)
+if getgenv().tunhan then
+    local touchPosition = position
+    tapCount = tapCount + 1
+for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Hitbox") then
+    v.Hitbox:FireServer(touchPosition, tapCount) 
+end
+end
+end
+end)
+drops:Toggle("⭐Fast Attack👆 X5",false,function(h)
+getgenv().tunhan = h
+local tapCount = 0 -- biến để đếm số lần nhấn
+
+UserInputService.TouchTapInWorld:Connect(function(position, processedByUI)
+if getgenv().tunhan then
+    local touchPosition = position
+    tapCount = tapCount + 5
+for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Hitbox") then
+    v.Hitbox:FireServer(touchPosition, tapCount) 
+end
+end
+end
+end)
+drops:Toggle("⭐Fast Attack👆 X15",false,function(h)
+getgenv().tunhan = h
+local tapCount = 0 -- biến để đếm số lần nhấn
+
+UserInputService.TouchTapInWorld:Connect(function(position, processedByUI)
+if getgenv().tunhan then
+    local touchPosition = position
+    tapCount = tapCount + 15
+for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Hitbox") then
+    v.Hitbox:FireServer(touchPosition, tapCount) 
+end
+end
+end
+end)
+drops:Toggle("⭐Fast Attack👆 X30",false,function(h)
+getgenv().tunhan = h
+local tapCount = 0 -- biến để đếm số lần nhấn
+
+UserInputService.TouchTapInWorld:Connect(function(position, processedByUI)
+if getgenv().tunhan then
+    local touchPosition = position
+    tapCount = tapCount + 30
+for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Hitbox") then
+    v.Hitbox:FireServer(touchPosition, tapCount) 
+end
+end
+end
+end)
+drops:Seperator()
 drops:Label("Fast ActtackV2 No Choose") 
  drops:Toggle("Fast ActtackV2 ",false, function(e) 
  getgenv().auto = e 
@@ -694,7 +756,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end 
  end) 
 
-  drops:Label("Fast AttackV3") 
+  drops:Seperator()
  drops:Toggle("Fast ActtackV3 ",false, function(e) 
  getgenv().fasst = e 
  if not getgenv().fasst then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
