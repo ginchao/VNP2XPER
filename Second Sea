@@ -640,6 +640,7 @@ end
 end
 end
 end)
+end)
 drops:Toggle("⭐Fast Attack👆 X5",false,function(h)
 getgenv().tunhan = h
 local tapCount = 0 -- biến để đếm số lần nhấn
@@ -655,6 +656,7 @@ end
 end
 end
 end)
+end)
 drops:Toggle("⭐Fast Attack👆 X15",false,function(h)
 getgenv().tunhan = h
 local tapCount = 0 -- biến để đếm số lần nhấn
@@ -669,6 +671,7 @@ if v:IsA("Tool") and v:FindFirstChild("Hitbox") then
 end
 end
 end
+end)
 end)
 drops:Toggle("⭐Fast Attack👆 X30",false,function(h)
 getgenv().tunhan = h
