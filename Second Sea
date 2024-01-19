@@ -642,11 +642,11 @@ end
 end)
 end)
 drops:Toggle("⭐Fast Attack👆 X5",false,function(h)
-getgenv().tunhan = h
+getgenv().tunhan1 = h
 local tapCount = 0 -- biến để đếm số lần nhấn
 
 UserInputService.TouchTapInWorld:Connect(function(position, processedByUI)
-if getgenv().tunhan then
+if getgenv().tunhan1 then
     local touchPosition = position
     tapCount = tapCount + 5
 for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
@@ -658,11 +658,11 @@ end
 end)
 end)
 drops:Toggle("⭐Fast Attack👆 X15",false,function(h)
-getgenv().tunhan = h
+getgenv().tunhan2 = h
 local tapCount = 0 -- biến để đếm số lần nhấn
 
 UserInputService.TouchTapInWorld:Connect(function(position, processedByUI)
-if getgenv().tunhan then
+if getgenv().tunhan2 then
     local touchPosition = position
     tapCount = tapCount + 15
 for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
@@ -674,11 +674,11 @@ end
 end)
 end)
 drops:Toggle("⭐Fast Attack👆 X30",false,function(h)
-getgenv().tunhan = h
+getgenv().tunhan3 = h
 local tapCount = 0 -- biến để đếm số lần nhấn
 
 UserInputService.TouchTapInWorld:Connect(function(position, processedByUI)
-if getgenv().tunhan then
+if getgenv().tunhan3 then
     local touchPosition = position
     tapCount = tapCount + 30
 for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
@@ -687,6 +687,7 @@ if v:IsA("Tool") and v:FindFirstChild("Hitbox") then
 end
 end
 end
+end)
 end)
 drops:Seperator()
 drops:Label("Fast ActtackV2 No Choose") 
