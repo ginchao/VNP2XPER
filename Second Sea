@@ -78,7 +78,7 @@ else
              game.StarterGui:SetCore("SendNotification", { -- SHOW NOTIFIACTION 
                  Title = "TestHub", -- NOTIFICACTION LABEL 
                  Text = "Mob Không Thể OneShot Khi Mất Đầu", 
-                 Icon = "", -
+                 Icon = "", 
                  Duration = 1 
              }) 
     end
