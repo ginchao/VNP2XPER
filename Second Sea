@@ -28,7 +28,7 @@ end
 ---------------
 
   local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()   
-   local win = DiscordLib:Window("[Test Hub X Premium⭐] ".."")   
+   local win = DiscordLib:Window("[Test Hub X Premium⭐] ".."| OneShot⭐ [Limited Time] ")   
 local per = game:GetService("Players").LocalPlayer.Name
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
  
