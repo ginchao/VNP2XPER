@@ -46,7 +46,6 @@ quest = y
 end
 end
 end)
-drops:Button("OneShot⭐", function()
 
 drops:Toggle("Auto Bring",false, function(a)
 if quest == nil then   
