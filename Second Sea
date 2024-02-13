@@ -28,7 +28,7 @@ end
 ---------------
 
   local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()   
-   local win = DiscordLib:Window("[Test Hub X Premium⭐] ".."| OneShot⭐ [Limited Time] ")   
+   local win = DiscordLib:Window("[Test Hub X Premium⭐] ".." ")   
 local per = game:GetService("Players").LocalPlayer.Name
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
  
@@ -47,44 +47,7 @@ end
 end
 end)
 drops:Button("OneShot⭐", function()
-if quest == nil then
-DiscordLib:Notification("Warning","Please Pick Mob","Ok")
-else
-local mob = game:GetService("Workspace")["NPC DAMAGE"][quest]
-local boss = mob.HumanoidRootPart
-local players = game.Players
-local localPlayer = players.LocalPlayer
-local localDistance = (localPlayer.Character.HumanoidRootPart.Position - boss.Position).Magnitude
--- Tạo một biến để lưu trữ khoảng cách nhỏ nhất
-local minDistance = math.huge -- Một số rất lớn
-    for i, v in ipairs(players:GetPlayers()) do
-        if v ~= localPlayer then
-            local playerDistance = (v.Character.HumanoidRootPart.Position - boss.Position).Magnitude
-            -- Cập nhật biến minDistance nếu có người chơi khác gần hơn
-            if playerDistance < minDistance then
-                minDistance = playerDistance
-            end
-        end
-    end
-    -- So sánh khoảng cách của bạn với biến minDistance
-    if localDistance > minDistance then
-DiscordLib:Notification("Warning","Thằng"..v.Name.."Gần Mob Hơn Bạn","Ok")
-else
-if mob:FindFirstChild("Head") then
-while task.wait do
-sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
-mob.Head:Destroy() end
-else
-             game.StarterGui:SetCore("SendNotification", { -- SHOW NOTIFIACTION 
-                 Title = "TestHub", -- NOTIFICACTION LABEL 
-                 Text = "Mob Không Thể OneShot Khi Mất Đầu", 
-                 Icon = "", 
-                 Duration = 1 
-             }) 
-    end
-end
-end
-end)
+
 drops:Toggle("Auto Bring",false, function(a)
 if quest == nil then   
    DiscordLib:Notification("Warning", "Choose Mob To Auto Bring", "Ok")   
