@@ -30,7 +30,7 @@ if quest == nil then
   getgenv().bringmob2 = a
  if v2 then v2:Disconnect() end 
 if bringmob2 ~= v2 then
-v2 = game.RunService.RenderStepped:Connect(function()
+v2 = game:GetService("RunService").RenderStepped:Connect(function()
 if bringmob2==false then v2:Disconnect()  end
 game.Workspace["NPC DAMAGE"][quest].HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5.5,0)
 if quest == "Kaidou" then
@@ -924,7 +924,7 @@ end)
 getgenv().autele = t
 if v2 then a:Disconnect() end
 if autele ~= v2 then
-v2 = game.RunService.RenderStepped:Connect(function()
+v2 = game:GetService("RunService").RenderStepped:Connect(function()
 if autele == false then v2:Disconnect() end game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6) wait()  
   end)  
   end  
@@ -938,7 +938,7 @@ if autele == false then v2:Disconnect() end game.Players.LocalPlayer.Character.H
 getgenv().bri = a
 if v2 then a:Disconnect() end
 if bri ~= v2 then
-v2 = game.RunService.RenderStepped:Connect(function()
+v2 = game:GetService("RunService").RenderStepped:Connect(function()
 if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait()  
   end)  
  end 
