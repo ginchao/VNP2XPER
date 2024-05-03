@@ -179,7 +179,7 @@ local Noclipping = nil
  end 
  end 
  end 
- Noclipping = game.RunService.Stepped:Connect(NoclipLoop) 
+ Noclipping = game:GetService("RunService").Stepped:Connect(NoclipLoop) 
  if not getgenv().Clip then Noclipping:Disconnect() end 
  end) 
  drops:Toggle("⭐Touch Grabtools",false, function(l)  
