@@ -874,7 +874,7 @@ if plr == nil then
  DiscordLib:Notification("Warning", "Choose Player to Spectate, Need Loadmap", "Ok") 
  else
 getgenv().look = v
-game.RunService.RenderStepped:Connect(function()
+game:GetService("RunService").RenderStepped:Connect(function()
 if getgenv().look then 
 workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.p, game.Players[plr].Character.Head.CFrame.p)
 end
@@ -967,7 +967,7 @@ if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRoo
 getgenv().brin = t
 if v2 then a:Disconnect() end
 if brin ~= v2 then
-v2 = game.RunService.RenderStepped:Connect(function()
+v2 = game:GetService("RunService").RenderStepped:Connect(function()
 if brin == false then v2:Disconnect() end
  for i, v in pairs(game.Players:GetChildren()) do 
  local ok = game.Players.LocalPlayer.Name 
