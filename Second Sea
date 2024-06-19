@@ -1,4 +1,25 @@
 local Notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Hoclomcongthuc/main/noitification%20"))()
+function df()
+local args = {
+    [1] = value
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("SavingEvent"):FireServer(unpack(args))
+return value
+end
+function sw(values)
+local args = {
+    [1] = values
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("SavingSword"):FireServer(unpack(args))
+return values
+end
+function ml(valuess)
+local args = {
+    [1] = valuess
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("SavingMelee"):FireServer(unpack(args))
+return valuess
+end
 
 ---------------
 
@@ -180,6 +201,77 @@ local Noclipping = nil
  end 
  end 
  Noclipping = game:GetService("RunService").Stepped:Connect(NoclipLoop) 
+drops:Toggle("🌟 Auto Cất",false,function(l)
+getgenv().au = l
+while au do wait()
+if game.Players.LocalPlayer.storedata.store.Value == "Store" then
+df(1) wait(1)
+elseif game.Players.LocalPlayer.storedata.store1.Value == "Store" then
+df(2) wait(1)
+elseif game.Players.LocalPlayer.storedata.store2.Value == "Store" then
+df(3) wait(1)
+elseif game.Players.LocalPlayer.storedata.store3.Value == "Store" then
+df(4) wait(1)
+elseif game.Players.LocalPlayer.storedata.store4.Value == "Store" then
+df(5) wait(1)
+elseif game.Players.LocalPlayer.storedata.store5.Value == "Store" then
+df(6) wait(1)
+elseif game.Players.LocalPlayer.storedata.store6.Value == "Store" then
+df(7) wait(1)
+elseif game.Players.LocalPlayer.storedata.store7.Value == "Store" then
+df(8) wait(1)
+elseif game.Players.LocalPlayer.storedata.store8.Value == "Store" then
+df(9) wait(1)
+elseif game.Players.LocalPlayer.storedata.store9.Value == "Store" then
+df(10) wait(1)
+else Notif.New("Full ❗",2)
+end
+if game.Players.LocalPlayer.storedata1.store.Value == "Store" then
+sw(-5) wait(1)
+elseif game.Players.LocalPlayer.storedata1.store1.Value == "Store" then
+sw(-4) wait(1)
+elseif game.Players.LocalPlayer.storedata1.store2.Value == "Store" then
+sw(-3) wait(1)
+elseif game.Players.LocalPlayer.storedata1.store3.Value == "Store" then
+sw(-2) wait(1)
+elseif game.Players.LocalPlayer.storedata1.store4.Value == "Store" then
+sw(-1) wait(1)
+elseif game.Players.LocalPlayer.storedata1.store5.Value == "Store" then
+sw(0) wait(1)
+elseif game.Players.LocalPlayer.storedata1.store6.Value == "Store" then
+sw(1) wait(1)
+elseif game.Players.LocalPlayer.storedata1.store7.Value == "Store" then
+sw(2) wait(1)
+elseif game.Players.LocalPlayer.storedata1.store8.Value == "Store" then
+sw(3) wait(1)
+elseif game.Players.LocalPlayer.storedata1.store9.Value == "Store" then
+sw(4) wait(1)
+else Notif.New("Full ❗",2)
+end
+if game.Players.LocalPlayer.storedata2.store.Value == "Store" then
+ml(-5) wait(1)
+elseif game.Players.LocalPlayer.storedata2.store1.Value == "Store" then
+ml(-4) wait(1)
+elseif game.Players.LocalPlayer.storedata2.store2.Value == "Store" then
+ml(-3) wait(1)
+elseif game.Players.LocalPlayer.storedata2.store3.Value == "Store" then
+ml(-2) wait(1)
+elseif game.Players.LocalPlayer.storedata2.store4.Value == "Store" then
+ml(-1) wait(1)
+elseif game.Players.LocalPlayer.storedata2.store5.Value == "Store" then
+ml(0) wait(1)
+elseif game.Players.LocalPlayer.storedata2.store6.Value == "Store" then
+ml(1) wait(1)
+elseif game.Players.LocalPlayer.storedata2.store7.Value == "Store" then
+ml(2) wait(1)
+elseif game.Players.LocalPlayer.storedata2.store8.Value == "Store" then
+ml(3) wait(1)
+elseif game.Players.LocalPlayer.storedata2.store9.Value == "Store" then
+ml(4) wait(1)
+else Notif.New("Full ❗",2)
+end
+end
+end)
  if not getgenv().Clip then Noclipping:Disconnect() end 
  end) 
  drops:Toggle("⭐Touch Grabtools",false, function(l)  
