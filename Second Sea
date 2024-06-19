@@ -201,6 +201,9 @@ local Noclipping = nil
  end 
  end 
  Noclipping = game:GetService("RunService").Stepped:Connect(NoclipLoop) 
+
+ if not getgenv().Clip then Noclipping:Disconnect() end 
+ end) 
 drops:Toggle("🌟 Auto Cất",false,function(l)
 getgenv().au = l
 while au do wait()
@@ -272,8 +275,6 @@ else Notif.New("Full ❗",2)
 end
 end
 end)
- if not getgenv().Clip then Noclipping:Disconnect() end 
- end) 
  drops:Toggle("⭐Touch Grabtools",false, function(l)  
   getgenv().grabtools = l  
   spawn(function()  
