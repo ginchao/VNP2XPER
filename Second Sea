@@ -235,7 +235,7 @@ elseif game.Players.LocalPlayer.storedata.store8.Value == "Store" then
 df(9) wait(1)
 elseif game.Players.LocalPlayer.storedata.store9.Value == "Store" then
 df(10) wait(1)
-else Notif.New("Full ❗",2)
+else Notif.New("Full DF❗",2)
 end
 if game.Players.LocalPlayer.storedata1.store.Value == "Store" then
 sw(-5) wait(1)
@@ -257,7 +257,7 @@ elseif game.Players.LocalPlayer.storedata1.store8.Value == "Store" then
 sw(3) wait(1)
 elseif game.Players.LocalPlayer.storedata1.store9.Value == "Store" then
 sw(4) wait(1)
-else Notif.New("Full ❗",2)
+else Notif.New("Full Sword❗",2)
 end
 if game.Players.LocalPlayer.storedata2.store.Value == "Store" then
 ml(-5) wait(1)
@@ -279,7 +279,7 @@ elseif game.Players.LocalPlayer.storedata2.store8.Value == "Store" then
 ml(3) wait(1)
 elseif game.Players.LocalPlayer.storedata2.store9.Value == "Store" then
 ml(4) wait(1)
-else Notif.New("Full ❗",2)
+else Notif.New("Full Melee❗",2)
 end
 end
 end)
