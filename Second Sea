@@ -36,7 +36,7 @@ local per = game:GetService("Players").LocalPlayer.Name
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
  
   local serv = win:Server("VNP2 X ⭐Premium", "")  
-  local drops = serv:Channel("Farm+LocalPlayer")  
+  local drops = serv:Channel("❗Farm+LocalPlayer")  
   local questlist = {}
 local quest = nil   
 for i, v in pairs(Workspace["NPC DAMAGE"]:GetChildren()) do
@@ -47,6 +47,58 @@ for i, v in pairs(game.Workspace["NPC DAMAGE"]:GetChildren()) do
 if y == v.Name then
 quest = y
 end
+end
+end)
+local skill = cc
+local sk = drops:Dropdown("Chọn Skill",{"Z","X","C","V","B","N"}, function(b)
+cc = b
+end)
+drops:Toggle("Tự Động Skill Khi Boss Chết",false,function(e)
+if cc then
+getgenv().q = e
+while q  do wait(.5)
+repeat wait() until game:GetService("Workspace")["NPC DAMAGE"][quest].Enemy.Health == 0 or getgenv().q == false
+spawn(function()
+for i, v in pairs(game.Players.LocalPlayer.Backpack: GetDescendants()) do
+if v:IsA("RemoteEvent") and v.Parent.Name == cc then
+pcall(function()
+v:FireServer()
+end)
+end
+end
+end)
+end
+else
+DiscordLib:Notification("❗ ","Chọn Skill","Ok")
+end
+end)
+drops:Toggle("Auto Kill",false,function(v)
+if lay then
+_G.Autob = v
+while _G.Autob do task.wait()
+pcall(function()
+if game:GetService("Workspace")["NPC DAMAGE"][quest].Enemy.Health > 0 then
+game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.CFrame*CFrame.new(0,0,11)
+for i, c in pairs(game.Players.LocalPlayer.Backpack: GetChildren()) do
+if c:FindFirstChild("Hitbox") then
+c:WaitForChild("Hitbox"):FireServer()
+end
+end
+else
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(0,1,-13)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(0,4,13)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(-13,1,0)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(10,2,0)
+end
+end)
+end
+else
+DiscordLib: Notification("❗","Chọn Boss","Ok")
 end
 end)
 
