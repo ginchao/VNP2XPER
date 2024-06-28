@@ -73,7 +73,7 @@ DiscordLib:Notification("❗ ","Chọn Skill","Ok")
 end
 end)
 drops:Toggle("Auto Kill",false,function(v)
-if lay then
+if quest then
 _G.Autob = v
 while _G.Autob do task.wait()
 pcall(function()
